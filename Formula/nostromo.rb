@@ -6,16 +6,14 @@ class Nostromo < Formula
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/pokanop/nostromo/releases/v0.1.0/nostromo_0.1.0_Darwin_x86_64.tar.gz"
-    sha256 "fdd6ccf36f245198d1eb11d851b3bde4a2eb3f95a5e6ca7467f8fe08cc90463b"
+    url "https://github.com/pokanop/nostromo/releases/download/v0.1.0/nostromo_0.1.0_Darwin_x86_64.tar.gz"
+    sha256 "30413dd80bfee026d4ddf635f7fecf4719c655dab5b15b29b48a4763072f3c57"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/pokanop/nostromo/releases/v0.1.0/nostromo_0.1.0_Linux_x86_64.tar.gz"
-      sha256 "c6528edd77899c97e1c5fcec9aa33e8fe0b0dbfb4a7a95e37be4243c520e5e7d"
+      url "https://github.com/pokanop/nostromo/releases/download/v0.1.0/nostromo_0.1.0_Linux_x86_64.tar.gz"
+      sha256 "792c9c6a38406f92ce4aac4379063f48567e828a087b3750d7f3e7903d67a9b3"
     end
   end
-  
-  depends_on "go"
 
   def install
     bin.install "nostromo"
