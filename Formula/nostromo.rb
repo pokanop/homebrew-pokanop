@@ -7,11 +7,11 @@ class Nostromo < Formula
 
   if OS.mac?
     url "https://github.com/pokanop/nostromo/releases/download/v0.1.1/nostromo_0.1.1_Darwin_x86_64.tar.gz"
-    sha256 "90e1cc4efdbbdef167e0a89ae0718e116518479c594314530c5dab15a700074a"
+    sha256 "e7c0ea82d62a13a3d380dc66ab477249b2af690e619f36c56ea678fa173427c6"
   elsif OS.linux?
     if Hardware::CPU.intel?
       url "https://github.com/pokanop/nostromo/releases/download/v0.1.1/nostromo_0.1.1_Linux_x86_64.tar.gz"
-      sha256 "c1e82173c4c313daa39a14f1b567905352c56d5ade2b47e02c8a3e993612dba3"
+      sha256 "1cec4e7654eb82bd4f769a78a834d3a96e98b98e08cd0cb505483a0e3ddb05b7"
     end
   end
 
@@ -25,6 +25,7 @@ class Nostromo < Formula
       nostromo init
     
     You can add shell bindings for autocompletion adding these to your init file(s):
+    
       eval "$(nostromo completion)" # for bash
       eval "$(nostromo completion --zsh)" # for zsh
   EOS
