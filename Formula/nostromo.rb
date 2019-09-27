@@ -7,11 +7,11 @@ class Nostromo < Formula
 
   if OS.mac?
     url "https://github.com/pokanop/nostromo/releases/download/v0.3.0/nostromo_0.3.0_Darwin_x86_64.tar.gz"
-    sha256 "1d4361d3f2379bbdb251c79d8987803da35803ba6d892e670399c8cc6c62085b"
+    sha256 "bfb214146977b184e1d5cd03ad6df23bfc11bd4655e4dad6c1dfb7ab727f95f0"
   elsif OS.linux?
     if Hardware::CPU.intel?
       url "https://github.com/pokanop/nostromo/releases/download/v0.3.0/nostromo_0.3.0_Linux_x86_64.tar.gz"
-      sha256 "fc5871855e2985082d2eb32a427e5ac05baf6c18a0da174178e3c1f0e43f72d6"
+      sha256 "b7620d918b3a853ee052bd4a9485cfa1229b6487361ab5f6cc0fb5b34bcb7166"
     end
   end
 
