@@ -2,16 +2,16 @@
 class Nostromo < Formula
   desc "nostromo is a CLI to manage aliases through simple commands to add and remove scoped aliases and substitutions."
   homepage "https://nostromo.sh"
-  version "0.3.2"
+  version "0.3.3"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/pokanop/nostromo/releases/download/v0.3.2/nostromo_0.3.2_Darwin_x86_64.tar.gz"
-    sha256 "c7dfa0a36b348a25b040825eb8ff948a6b4acbb648a31f9e397ac632d6870082"
+    url "https://github.com/pokanop/nostromo/releases/download/v0.3.3/nostromo_0.3.3_Darwin_x86_64.tar.gz"
+    sha256 "b84ae08c5a4e1d0e7802a088a8d45155bedadb1abee03199df8049fa749c7968"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/pokanop/nostromo/releases/download/v0.3.2/nostromo_0.3.2_Linux_x86_64.tar.gz"
-      sha256 "c717115e406dd2f1051f7553b13d9513b9d015fd217d32364829fce6c0a798e6"
+      url "https://github.com/pokanop/nostromo/releases/download/v0.3.3/nostromo_0.3.3_Linux_x86_64.tar.gz"
+      sha256 "142dc27b4f9074f2429275dd7939667827e6e9b85d52fff7249d101b1a63ce77"
     end
   end
 
