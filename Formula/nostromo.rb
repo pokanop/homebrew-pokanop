@@ -2,16 +2,16 @@
 class Nostromo < Formula
   desc "nostromo is a CLI to manage aliases through simple commands to add and remove scoped aliases and substitutions."
   homepage "https://nostromo.sh"
-  version "0.7.0"
+  version "0.7.1"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/pokanop/nostromo/releases/download/v0.7.0/nostromo_0.7.0_Darwin_x86_64.tar.gz"
-    sha256 "8d4c0eda228ba1bb9ed60ea29a083e6c241c4cd6bdd036ad94fbd7c2b6cc3497"
+    url "https://github.com/pokanop/nostromo/releases/download/v0.7.1/nostromo_0.7.1_Darwin_x86_64.tar.gz"
+    sha256 "ebd8bf0cd1247bce4972809d475d757e5205185bc52a7a201e6ddba3d290c8c4"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/pokanop/nostromo/releases/download/v0.7.0/nostromo_0.7.0_Linux_x86_64.tar.gz"
-      sha256 "aca3ffaf7f440dd042843b49186cc7e85db5ca56831f9abbb0a51f9e82efb23d"
+      url "https://github.com/pokanop/nostromo/releases/download/v0.7.1/nostromo_0.7.1_Linux_x86_64.tar.gz"
+      sha256 "88b6ce7ba6ece119eda1cbec91dacd2448f82fb6843a79e45ad488f47f6a535d"
     end
   end
 
@@ -24,10 +24,9 @@ class Nostromo < Formula
     
       nostromo init
     
-    You can add shell bindings for autocompletion adding these to your init file(s):
+    You can get started by running the following interactive command:
     
-      eval "$(nostromo completion)" # for bash
-      eval "$(nostromo completion --zsh)" # for zsh
+      nostromo add
   EOS
   end
 
