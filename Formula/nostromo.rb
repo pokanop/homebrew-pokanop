@@ -2,16 +2,16 @@
 class Nostromo < Formula
   desc "nostromo is a CLI to manage aliases through simple commands to add and remove scoped aliases and substitutions."
   homepage "https://nostromo.sh"
-  version "0.7.4"
+  version "0.7.5"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/pokanop/nostromo/releases/download/v0.7.4/nostromo_0.7.4_Darwin_x86_64.tar.gz"
-    sha256 "599afba5701dc012ae77e839108ff9a921bf39eecea4db0093b6b856c05d0089"
+    url "https://github.com/pokanop/nostromo/releases/download/v0.7.5/nostromo_0.7.5_Darwin_x86_64.tar.gz"
+    sha256 "9eada2e1b4d5e3311ce5e4235005e49f3e5eb1f746bcb6807ce61b16bf616cf6"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/pokanop/nostromo/releases/download/v0.7.4/nostromo_0.7.4_Linux_x86_64.tar.gz"
-      sha256 "02a92236fdf7f56c33302b99f47b3b4287a84e7616cc04a076060b22c3546ffa"
+      url "https://github.com/pokanop/nostromo/releases/download/v0.7.5/nostromo_0.7.5_Linux_x86_64.tar.gz"
+      sha256 "906dc9291898e1f385e14ab9fdb88ea904a90c86dd33719abea44a9eb7214d97"
     end
   end
 
@@ -20,10 +20,11 @@ class Nostromo < Formula
   end
 
   def caveats; <<~EOS
-    Initialize nostromo and create a manifest under ~/.nostromo by running:
+    Initialize nostromo which will create a manifest under ~/.nostromo by running:
     
       nostromo init
     
+    Be sure to source your shell profile after initializing nostromo for auto-complete to work.
     You can get started by running the following interactive command:
     
       nostromo add
