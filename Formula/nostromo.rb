@@ -2,16 +2,16 @@
 class Nostromo < Formula
   desc "nostromo is a CLI to manage aliases through simple commands to add and remove scoped aliases and substitutions."
   homepage "https://nostromo.sh"
-  version "0.7.5"
+  version "0.7.6"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/pokanop/nostromo/releases/download/v0.7.5/nostromo_0.7.5_Darwin_x86_64.tar.gz"
-    sha256 "9eada2e1b4d5e3311ce5e4235005e49f3e5eb1f746bcb6807ce61b16bf616cf6"
+    url "https://github.com/pokanop/nostromo/releases/download/v0.7.6/nostromo_0.7.6_Darwin_x86_64.tar.gz"
+    sha256 "4fccc0886b1d2068ad886ce72ba7e4f90473f2f78554c45101a966f6e257946a"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/pokanop/nostromo/releases/download/v0.7.5/nostromo_0.7.5_Linux_x86_64.tar.gz"
-      sha256 "906dc9291898e1f385e14ab9fdb88ea904a90c86dd33719abea44a9eb7214d97"
+      url "https://github.com/pokanop/nostromo/releases/download/v0.7.6/nostromo_0.7.6_Linux_x86_64.tar.gz"
+      sha256 "e2faa0b73a3c233a1b71909299e85b46b5555d48f2b4625e00f7cb2ff0b71f39"
     end
   end
 
@@ -24,10 +24,11 @@ class Nostromo < Formula
     
       nostromo init
     
-    Be sure to source your shell profile after initializing nostromo for auto-complete to work.
     You can get started by running the following interactive command:
     
       nostromo add
+    
+    Be sure to source your shell profile after initializing nostromo for auto-complete to work.
   EOS
   end
 
