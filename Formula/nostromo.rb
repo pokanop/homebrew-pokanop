@@ -5,20 +5,20 @@
 class Nostromo < Formula
   desc "nostromo is a CLI to manage aliases through simple commands to add and remove scoped aliases and substitutions."
   homepage "https://nostromo.sh"
-  version "0.8.1"
+  version "0.8.2"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/pokanop/nostromo/releases/download/v0.8.1/nostromo_0.8.1_Darwin_arm64.tar.gz"
-      sha256 "a73179412d9d06c03472c628d4a7da92bc6ad66c8025660127d4eaf93c32e897"
+      url "https://github.com/pokanop/nostromo/releases/download/v0.8.2/nostromo_0.8.2_Darwin_arm64.tar.gz"
+      sha256 "5a61b4243898956eb85de325b07ee68e626afbf3749ab4a887e789b4f4b1be0f"
 
       def install
         bin.install "nostromo"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/pokanop/nostromo/releases/download/v0.8.1/nostromo_0.8.1_Darwin_x86_64.tar.gz"
-      sha256 "abc04b917b70cd036792529bac6d0d806307ed0e5d58561adc31a7c42796b9a8"
+      url "https://github.com/pokanop/nostromo/releases/download/v0.8.2/nostromo_0.8.2_Darwin_x86_64.tar.gz"
+      sha256 "d693f0a776c77aee6cd1d7e820f7b9eb1a97ad3dc43bf36382436b33a52c8a09"
 
       def install
         bin.install "nostromo"
@@ -28,16 +28,16 @@ class Nostromo < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/pokanop/nostromo/releases/download/v0.8.1/nostromo_0.8.1_Linux_arm64.tar.gz"
-      sha256 "b063a6a21280de231f34135cf132587a80fd73298b153e55d7e03a9d699b92b6"
+      url "https://github.com/pokanop/nostromo/releases/download/v0.8.2/nostromo_0.8.2_Linux_arm64.tar.gz"
+      sha256 "188cf82b083a3e3a3b9c9d34a3cd6d431473e8ad7098cc4d4f9eb403a60368b5"
 
       def install
         bin.install "nostromo"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/pokanop/nostromo/releases/download/v0.8.1/nostromo_0.8.1_Linux_x86_64.tar.gz"
-      sha256 "4346da04ef395f8d8df9673386f4d49df0bbe282ba5258d381c6349dacbc6f06"
+      url "https://github.com/pokanop/nostromo/releases/download/v0.8.2/nostromo_0.8.2_Linux_x86_64.tar.gz"
+      sha256 "9b6f9d2fa60c462541ac9bfd7d7ec0ff0c222fcaaa92c6162f107ca5dcdb0c3e"
 
       def install
         bin.install "nostromo"
