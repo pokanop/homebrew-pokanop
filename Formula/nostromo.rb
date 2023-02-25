@@ -5,21 +5,21 @@
 class Nostromo < Formula
   desc "nostromo is a CLI to manage aliases through simple commands to add and remove scoped aliases and substitutions."
   homepage "https://nostromo.sh"
-  version "0.11.4"
+  version "0.12.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/pokanop/nostromo/releases/download/v0.11.4/nostromo_0.11.4_Darwin_arm64.tar.gz"
-      sha256 "15ee5d06327a92fb9ebc6c9c5006429cf2fe9dc16c7d9effb2a26805788c8a5e"
+      url "https://github.com/pokanop/nostromo/releases/download/v0.12.0/nostromo_Darwin_arm64.tar.gz"
+      sha256 "1dfab54a89f1286005894477ec26c82b6ca2590b13e24eb8f696f99e93b2f074"
 
       def install
         bin.install "nostromo"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/pokanop/nostromo/releases/download/v0.11.4/nostromo_0.11.4_Darwin_x86_64.tar.gz"
-      sha256 "05d6de3ad536a13de7fc558f8ae3f6dfec64a775e0113ad2e03c26ba2fe2a582"
+      url "https://github.com/pokanop/nostromo/releases/download/v0.12.0/nostromo_Darwin_x86_64.tar.gz"
+      sha256 "dd65a9717122143f4b0f48117241f7cb3df2ffdc4e066c45b27d818f112aabe5"
 
       def install
         bin.install "nostromo"
@@ -29,16 +29,16 @@ class Nostromo < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/pokanop/nostromo/releases/download/v0.11.4/nostromo_0.11.4_Linux_arm64.tar.gz"
-      sha256 "c969bbdb7d2141235a95b4ac2b8fe63bc5df2e91fddfba7d8dceb866f2af33ac"
+      url "https://github.com/pokanop/nostromo/releases/download/v0.12.0/nostromo_Linux_arm64.tar.gz"
+      sha256 "d77b7b9f3b553f5be0ac148f0cef70044c9602ccfbee4125b57fa53a1d6bdd9f"
 
       def install
         bin.install "nostromo"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/pokanop/nostromo/releases/download/v0.11.4/nostromo_0.11.4_Linux_x86_64.tar.gz"
-      sha256 "4075c260f9bb71e23e96ff3152c9135a7f6f939fcbfd62e7eb20c0bfd1ea6801"
+      url "https://github.com/pokanop/nostromo/releases/download/v0.12.0/nostromo_Linux_x86_64.tar.gz"
+      sha256 "3ebb212029c1694480c1059e07db77d378e715de47ee8c1e0b6f2905be765955"
 
       def install
         bin.install "nostromo"
@@ -46,17 +46,22 @@ class Nostromo < Formula
     end
   end
 
-  def caveats; <<~EOS
-    Initialize nostromo which will create a manifest under ~/.nostromo by running:
+  def caveats
+    <<~EOS
+      Initialize nostromo which will create a manifest under ~/.nostromo by running:
 
-      nostromo init
+        nostromo init
 
-    You can get started by running the following interactive command:
+      You can get started adding commands by running the following interactive command:
 
-      nostromo add
+        nostromo add
 
-    Be sure to source your shell profile after initializing nostromo for auto-complete to work.
-  EOS
+      If you have remote manifests already, you can quickly get them by running:
+
+        nostromo dock <url>
+
+      Be sure to source your shell profile after initializing nostromo for auto-complete to work.
+    EOS
   end
 
   test do
