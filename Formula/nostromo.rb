@@ -5,21 +5,21 @@
 class Nostromo < Formula
   desc "nostromo is a CLI to manage aliases through simple commands to add and remove scoped aliases and substitutions."
   homepage "https://nostromo.sh"
-  version "0.14.0"
+  version "0.14.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/pokanop/nostromo/releases/download/v0.14.0/nostromo_Darwin_x86_64.tar.gz"
-      sha256 "141924e260cfa132acd392f1f5f7b21f6de997ea60fdbdd6bd6be964c3a335aa"
+      url "https://github.com/pokanop/nostromo/releases/download/v0.14.1/nostromo_Darwin_x86_64.tar.gz"
+      sha256 "b0ed7714ef253a045ba3e686cef42cd2f3f1c88b55823bed162237eb03979660"
 
       define_method(:install) do
         bin.install "nostromo"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/pokanop/nostromo/releases/download/v0.14.0/nostromo_Darwin_arm64.tar.gz"
-      sha256 "8da35eda7003abf5d90482a577bd2102206800d3e7439c4a6bc458c519898e44"
+      url "https://github.com/pokanop/nostromo/releases/download/v0.14.1/nostromo_Darwin_arm64.tar.gz"
+      sha256 "64b4e4db5fc769737227efb4f5f74a3985c9e4e722978cff5984b8b7fa966c1e"
 
       define_method(:install) do
         bin.install "nostromo"
@@ -29,15 +29,15 @@ class Nostromo < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/pokanop/nostromo/releases/download/v0.14.0/nostromo_Linux_x86_64.tar.gz"
-      sha256 "f4c3861382060eba2af5535193987e7846d6f711416c0ff5c74690bfceb2f36d"
+      url "https://github.com/pokanop/nostromo/releases/download/v0.14.1/nostromo_Linux_x86_64.tar.gz"
+      sha256 "54ca571314769cb2a16c4f70528897730739c7bd6eef5188e76c6da6ecf60e00"
       define_method(:install) do
         bin.install "nostromo"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/pokanop/nostromo/releases/download/v0.14.0/nostromo_Linux_arm64.tar.gz"
-      sha256 "c0bcae34e13b0c333f6d86f9269602a5d0412a8f78bfd5d24026206d9a030a2a"
+      url "https://github.com/pokanop/nostromo/releases/download/v0.14.1/nostromo_Linux_arm64.tar.gz"
+      sha256 "4d5eb7b5b9b0136e2cf7f5abebd836f32915424092eb1dd140a06bcb0e3660f4"
       define_method(:install) do
         bin.install "nostromo"
       end
