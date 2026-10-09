@@ -11,7 +11,7 @@ class Nostromo < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/pokanop/nostromo/releases/download/v0.14.2/nostromo_Darwin_x86_64.tar.gz"
-      sha256 "f23fa201ee020f2f6fd060d01eee778713f7a09cc338b775402ef2d190fcfa72"
+      sha256 "cb1c9be4c8a3009deaf7833a993528e947b9f0ad1472ff725523cd7cec6c5f45"
 
       define_method(:install) do
         bin.install "nostromo"
@@ -19,7 +19,7 @@ class Nostromo < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/pokanop/nostromo/releases/download/v0.14.2/nostromo_Darwin_arm64.tar.gz"
-      sha256 "f780611d2886e1b659fa0a82aeda9f7719736ddc613ccee7ef459c3a2297a411"
+      sha256 "8d1af50e4a11570fc2feb7cf5bc64fb0e65ccafbe6e82964366ce9e8d06bc9b7"
 
       define_method(:install) do
         bin.install "nostromo"
@@ -30,14 +30,14 @@ class Nostromo < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/pokanop/nostromo/releases/download/v0.14.2/nostromo_Linux_x86_64.tar.gz"
-      sha256 "3b5b411c3e3c466c530878a91f488c7d61b64f5842b614c440880e4459be0e9f"
+      sha256 "27f7ac9bf992eb9aa7beee630c3b1882aad8678988d0baf02e2c5222cc3854dc"
       define_method(:install) do
         bin.install "nostromo"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/pokanop/nostromo/releases/download/v0.14.2/nostromo_Linux_arm64.tar.gz"
-      sha256 "ff5c26704cc7d07a0a56e922e3fbf25a65c8b1742c9f28f19a08d7081fe49372"
+      sha256 "9a7a58d8feb1764421845d9a03e1c9ff79906eefd6150c0d595afdabaf177ebb"
       define_method(:install) do
         bin.install "nostromo"
       end
